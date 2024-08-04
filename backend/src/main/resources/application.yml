@@ -1,0 +1,29 @@
+
+
+spring:
+  application:
+    name: bluejayNest
+  main:
+    web-application-type: servlet
+  datasource:
+    url: jdbc:postgresql://localhost:5332/bluejay
+    username: bluejay
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+    open-in-view: false
+
+cors:
+  allowed-origins: "*"
+  allowed-methods: "*"
+
+server:
+  port: 8080
+  error:
+    include-message: always

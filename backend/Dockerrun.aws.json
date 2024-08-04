@@ -1,0 +1,23 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "bluejaynest",
+      "image": "bluejaycottage/bluejaynest:latest",
+      "essential": true,
+      "memory": 512,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8080
+        }
+      ],
+      "environment": [
+        {
+          "name": "SPRING_DATASOURCE_URl",
+          "value": "jdbc:postgresql://TODO:5432/bluejay"
+        }
+      ]
+    }
+  ]
+}
